@@ -1,0 +1,35 @@
+#include <main.h>
+
+int16 value = 0;
+#byte T2CON = 0x12
+#byte TMR2 = 0x11
+#byte PR2 = 0x92
+#byte PIR1 = 0x0C
+#byte PIE1 = 0x8C
+#byte trisc = 0x87
+#byte CCPR1L = 0x15
+#byte CCPR1H = 0x16
+#byte CCP1CON = 0x17
+#bit CCP1CON5 = CCP1CON.5
+#bit CCP1CON4 = CCP1CON.4
+
+void main()
+{
+   setup_adc_ports(AN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   set_adc_channel(0);
+   delay_ms(1);
+   PR2 = 0xFF; //255
+   CCPR1L = 125; //percent of high
+   CCP1CON4 = 1;
+   CCP1CON5 = 1;
+   CCP1CON = 0b00001100;
+   trisc = 0x00;
+   T2CON = 0b00000100; //timer2 is on
+   TMR2 = 0;
+   while(TRUE)
+   {
+      value = CCP1CON4*1 + CCP1CON5*2 + CCPR1L;
+   }
+
+}
