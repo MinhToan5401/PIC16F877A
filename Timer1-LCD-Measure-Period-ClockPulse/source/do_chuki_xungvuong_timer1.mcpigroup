@@ -1,0 +1,6 @@
+[PROJECTS]
+Count=2
+Project0=..\delay_1ms_timer1\delay_1ms_timer1.mcppi
+Project1=do_chuki_xungvuong_timer1.mcppi
+[ActiveProject]
+Index=1
