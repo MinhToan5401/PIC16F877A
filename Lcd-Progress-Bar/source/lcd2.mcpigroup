@@ -1,0 +1,7 @@
+[PROJECTS]
+Count=3
+Project0=..\xe\MyProject.mcppi
+Project1=..\lcd\lcd.mcppi
+Project2=lcd2.mcppi
+[ActiveProject]
+Index=1
