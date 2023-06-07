@@ -1,0 +1,20 @@
+#include <main.h>
+
+unsigned int16 i;
+
+void main()
+{
+   port_b_pullups(TRUE);
+   output_b(0);
+   set_tris_b(7);
+   output_c(0);
+   set_tris_c(0);
+   setup_adc(ADC_CLOCK_DIV_32);
+   setup_adc_ports(AN0);
+   set_adc_channel(0);
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}

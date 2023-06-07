@@ -1,0 +1,8 @@
+[PROJECTS]
+Count=4
+Project0=..\giao_tiep_2vdk_uart2\uart_giaotiep_2vdk.mcppi
+Project1=..\giao_tiep_2vdk_uart\uart_giaotiep_2vdk.mcppi
+Project2=..\PWM\PWM.mcppi
+Project3=PWM_DC_motor.mcppi
+[ActiveProject]
+Index=3

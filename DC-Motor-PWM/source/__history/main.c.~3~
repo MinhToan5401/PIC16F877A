@@ -1,0 +1,72 @@
+#include <main.h>
+
+unsigned int16 i;
+
+void main()
+{
+   port_b_pullups(TRUE);
+   output_b(0);
+   set_tris_b(7);
+   output_c(0);
+   set_tris_c(0);
+   setup_adc(ADC_CLOCK_DIV_32);
+   setup_adc_ports(AN0);
+   set_adc_channel(0);
+   setup_timer_2(T2_DIV_BY_16, 255, 1); //490 Hz
+   delay_ms(100);
+   while(TRUE)
+   {
+      i=read_adc();
+      if(input(PIN_B3) == 1)
+      {
+         set_pwm1_duty(i);
+      }
+      if(input(PIN_B4) == 1)
+      {
+         set_pwm2_duty(i);
+      }
+      delay_ms(10);
+      if(input(PIN_B0) == 0)
+      {
+         if(input(PIN_B3) == 0)
+         {
+            output_b(0);
+            setup_ccp1(CCP_OFF);
+            setup_ccp2(CCP_OFF);
+            output_c(0);
+            delay_ms(100);
+            setup_ccp1(CCP_PWM);
+            output_high(PIN_B3);
+         }
+      }
+      
+      if(input(PIN_B1) == 0)
+      {
+         if(input(PIN_B4) == 0)
+         {
+            output_b(0);
+            setup_ccp1(CCP_OFF);
+            setup_ccp2(CCP_OFF);
+            output_c(0);
+            delay_ms(100);
+            setup_ccp2(CCP_PWM);
+            output_high(PIN_B4);
+         }
+      }
+      
+       if(input(PIN_B1) == 0)
+       {
+         if(input(PIN_B4) == 0)
+         {
+            output_b(0)
+            output_c(0);;
+            setup_ccp1(CCP_OFF);
+            setup_ccp2(CCP_OFF);            
+            delay_ms(100);
+            setup_ccp2(CCP_PWM);
+            output_high(PIN_B4);
+         }
+       }
+   }
+
+}
