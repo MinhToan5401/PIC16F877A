@@ -1,0 +1,142 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-023 adc0
+024-027 adc1
+028-02B lm35_a
+02C-02F lm35_b
+030-031 @sprintf_string
+032     lcd_init.i
+032     read_lm35_a.i
+032     read_lm35_b.i
+032     MAIN.@SCRATCH1
+032     @PSTRINGC7_622.@SCRATCH1
+033-036 lcd_init.LCD_INIT_STRING
+033-036 @FTOSD.P1
+033-036 @SDTOF.P2
+033     read_lm35_a.@SCRATCH1
+033     read_lm35_b.@SCRATCH1
+033     MAIN.@SCRATCH2
+033     @PSTRINGC7_622.@SCRATCH2
+034     read_lm35_a.@SCRATCH2
+034     read_lm35_b.@SCRATCH2
+034     MAIN.@SCRATCH3
+034     @PSTRINGC7_622.@SCRATCH3
+035     read_lm35_a.@SCRATCH3
+035     read_lm35_b.@SCRATCH3
+035     MAIN.@SCRATCH4
+035     @PSTRINGC7_622.@SCRATCH4
+036-039 @DIVS3232.P1
+036     read_lm35_a.@SCRATCH4
+036     read_lm35_b.@SCRATCH4
+036     MAIN.@SCRATCH5
+037-03A @DIVFF.P1
+037     lcd_init.@SCRATCH1
+037     @SDTOF.@SCRATCH1
+037     @FTOSD.@SCRATCH1
+037     MAIN.@SCRATCH6
+038     MAIN.@SCRATCH7
+039     MAIN.@SCRATCH8
+03A     lcd_putc.c
+03A-03D @DIVS3232.P1
+03B-03E @DIVFF.P1
+03B     @delay_ms1.P2
+03B     lcd_gotoxy.x
+03C     lcd_gotoxy.y
+03D     lcd_gotoxy.address
+03E     lcd_gotoxy.@SCRATCH1
+03E     @DIVS3232.@SCRATCH1
+03F     lcd_send_byte.address
+03F     @DIVFF.@SCRATCH1
+03F     @DIVS3232.@SCRATCH2
+040     lcd_send_byte.n
+040     @DIVFF.@SCRATCH2
+040     @DIVS3232.@SCRATCH3
+041     lcd_read_byte.low
+041     lcd_send_byte.@SCRATCH1
+041     @DIVFF.@SCRATCH3
+041     @DIVS3232.@SCRATCH4
+042     lcd_read_byte.high
+042     lcd_send_nibble.n
+042     @DIVFF.@SCRATCH4
+042     @DIVS3232.@SCRATCH5
+043     lcd_read_nibble.n
+043     lcd_read_byte.@SCRATCH1
+043     @DIVFF.@SCRATCH5
+043     @DIVS3232.@SCRATCH6
+044     lcd_read_nibble.@SCRATCH1
+044     @DIVFF.@SCRATCH6
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const652.call
+00000C  @const660.call
+00000D  @const661.call
+00000E  @delay_ms1
+000022  lcd_send_nibble
+00004E  lcd_read_nibble
+00007F  lcd_send_byte
+000087  lcd_read_byte
+0000DB  lcd_init
+000121  lcd_gotoxy
+000133  lcd_putc
+00015F  @PSTRINGC7_622
+0001B5  @SDTOF
+0001E3  @DIVFF
+0002AD  @FTOSD
+0002CC  read_lm35_a
+000364  read_lm35_b
+0003FC  @DIVS3232
+000476  MAIN
+000476  @cinit1
+00048A  @cinit2
+
+Project Directory:
+    D:\Download\HK222\VDK\thi_nghiem\lab2\Main\
+
+Project Files:
+    main.c                                                  [03-Thg4-23 09:18  CRC=50845C3B]
+    main.h                                                  [03-Thg4-23 08:50  CRC=D872A938]
+    C:\Program Files (x86)\PICC\Devices\16F887.h            [12-Thg11-13 14:35  CRC=6CB1A611]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [19-Thg9-13 15:38  CRC=D1A6378A]
+
+Source signature=38F51A98
+Program memory checksum=0000
+Hex file CRC=389B
+
+Units:
+    D:\Download\HK222\VDK\thi_nghiem\lab2\Main\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

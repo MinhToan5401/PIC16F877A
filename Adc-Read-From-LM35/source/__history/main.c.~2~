@@ -1,0 +1,14 @@
+#include <16F887.h>
+#device ADC=16
+#fuses intrc_io
+#use delay(clock=8M)
+
+void main()
+{
+
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}

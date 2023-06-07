@@ -1,0 +1,9 @@
+#include <16F887.h>
+#device ADC=16
+
+#FUSES NOWDT                 	//No Watch Dog Timer
+#FUSES WDTWIN_50%            	//Watchdog Window is 50% of WDT period
+#FUSES WRT_1000              	//Program Memory Write Protected from 0 to 0x0FFF
+
+#use delay(crystal=20000000)
+

@@ -1,0 +1,14 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F877A -C -Y -DL -O1111110-1 -fo20 -N"D:\Download\microC\New folder\button_count_tmr1.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"D:\Download\microC\New folder\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "button_count_tmr1.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_Conversions.mcl" "__Lib_Button.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
+diagnostics: 0	122	Compilation Started	button_count_tmr1.c
+warning: 52	1508	Implicit conversion of int to ptr	button_count_tmr1.c
+warning: 55	1508	Implicit conversion of int to ptr	button_count_tmr1.c
+hint: 20	1163	Variable 'counter' has been declared, but not used	button_count_tmr1.c
+diagnostics: 65	123	Compiled Successfully	button_count_tmr1.c
+diagnostics: 0	127	All files Compiled in 47 ms	 
+hint: 0	1144	Used RAM (bytes): 29 (8%)  Free RAM (bytes): 323 (92%)	Used RAM (bytes): 29 (8%)  Free RAM (bytes): 323 (92%)
+hint: 0	1144	Used ROM (program words): 492 (6%)  Free ROM (program words): 7700 (94%)	Used ROM (program words): 492 (6%)  Free ROM (program words): 7700 (94%)
+diagnostics: 0	125	Project Linked Successfully	button_count_tmr1.mcppi
+diagnostics: 0	128	Linked in 15 ms	 
+diagnostics: 0	129	Project 'button_count_tmr1.mcppi' completed: 78 ms	 
+diagnostics: 0	103	Finished successfully: 28 Thg4 2023, 15:58:17	button_count_tmr1.mcppi

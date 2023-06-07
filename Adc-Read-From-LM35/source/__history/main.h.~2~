@@ -1,0 +1,7 @@
+
+
+#FUSES NOWDT                    //No Watch Dog Timer
+#FUSES WRT_1000                 //Program Memory Write Protected from 0 to 0x0FFF
+
+
+
